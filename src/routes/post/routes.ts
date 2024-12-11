@@ -3,6 +3,7 @@ import { FastifyRequest, FastifyInstance, FastifyReply, FastifyPluginOptions } f
 import { CreatePostController } from "../../controllers/post/CreatePostController";
 import { UpdatePostController } from "../../controllers/post/UpdatePostController";
 import { DeletePostController } from "../../controllers/post/DeletePostController";
+import { GetAllPostsController } from "../../controllers/post/GetAllPostsController";
 
 export default async function RoutesPost(fastify: FastifyInstance, plugin: FastifyPluginOptions) {
 
@@ -15,7 +16,11 @@ export default async function RoutesPost(fastify: FastifyInstance, plugin: Fasti
     });
 
     fastify.delete("/auth/posts/delete-post/", async (request: FastifyRequest, reply: FastifyReply) => {
-        return new UpdatePostController().Handle(request, reply)
+        return new DeletePostController().Handle(request, reply)
+    });
+
+    fastify.get("/auth/posts/all-posts/", async (request: FastifyRequest, reply: FastifyReply) => {
+        return new GetAllPostsController().Handle(request, reply)
     });
 
 };
