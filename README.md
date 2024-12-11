@@ -18,6 +18,12 @@ i made this api just to practice and fun, my idea was made a system like Twitter
 https://github.com/NuneszG/posts.git
 ```
 
+> [!TIP]
+> if you have Make installed in your machine, you can run api with 
+>```
+>make dev    
+>```
+
 ### Run api
 ```
 npm run dev
