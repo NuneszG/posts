@@ -13,9 +13,9 @@ i made this api just to practice and fun, my idea was made a system like Twitter
 - __Profile__: CRUD to search profiles by username, get all profiles, update and delete.
 - __Category__: CRUD to get all categories, get all posts of specific category, create a new category, update and delete.
 
-### Copy repository
+### Clone repository
 ```
-https://github.com/NuneszG/posts.git
+git clone https://github.com/NuneszG/posts.git
 ```
 
 > [!TIP]
