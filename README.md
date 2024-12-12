@@ -16,6 +16,12 @@ i made this api just to practice and fun, my idea was made a system like Twitter
 - __Category__: CRUD to get all categories, get all posts of specific category, create a new category, update and delete.
 - __Comments__: CRUD to get all comments of specific post, create a new comment, update and delete comments.
 
+
+### Technologies to test
+- Insomnia
+- Postman
+
+
 ### Clone repository
 ```
 git clone https://github.com/NuneszG/posts.git
@@ -31,10 +37,6 @@ git clone https://github.com/NuneszG/posts.git
 ```
 npm run dev
 ```
-
-### Technologies to test
-- Insomnia
-- Postman
 
 ### Api running on
 ```
