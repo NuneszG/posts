@@ -12,6 +12,7 @@ i made this api just to practice and fun, my idea was made a system like Twitter
 - __Post__: CRUD to user can create a post with some specific category, get all posts, update and delete some post.
 - __Profile__: CRUD to search profiles by username, get all profiles, update and delete.
 - __Category__: CRUD to get all categories, get all posts of specific category, create a new category, update and delete.
+- __Comments__: CRUD to get all comments of specific post, create a new comment, update and delete.
 
 ### Clone repository
 ```

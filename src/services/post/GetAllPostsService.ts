@@ -6,7 +6,8 @@ export class GetAllPostsService {
         const Posts = await Prisma.post.findMany({
             include: {
                 author: true,
-                category: true
+                category: true,
+                comments: true
             }
         });
 

@@ -1,4 +1,4 @@
-- build model (user, profile, post, category)
+- build model (user, profile, post, category, comment)
     
     user 
         - name
@@ -9,11 +9,17 @@
         - profile
         - posts[]
 
+    comment 
+        - id 
+        - author
+        - content
+
     post
         - user
         - title
         - content
         - category[]
+        - comments[]
         - published
 
     category 
@@ -30,6 +36,12 @@
                     get all posts of specific category
                     create new category
                     update and delete category
+
+                comments 
+                    create comment on some post
+                    delete comment 
+                    update comment
+
 
                 profile
                     search profile by username

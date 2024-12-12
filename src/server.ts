@@ -3,6 +3,7 @@ import cors from "@fastify/cors";
 
 import RoutesUser from "./routes/user/routes";
 import RoutesCategory from "./routes/category/routes";
+import RoutesComment from "./routes/comment/routes";
 import RoutesProfile from "./routes/profile/routes";
 import RoutesPost from "./routes/post/routes";
 
@@ -16,6 +17,7 @@ const Start = async () => {
 
     await App.register(RoutesUser);
     await App.register(RoutesCategory);
+    await App.register(RoutesComment);
     await App.register(RoutesProfile);
     await App.register(RoutesPost);
 

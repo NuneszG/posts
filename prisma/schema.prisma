@@ -22,6 +22,7 @@ model User {
   password      String
   status        Boolean?  @default(true)
   posts         Post[]
+  comments      Comment[]
   profile       Profile   @relation(fields: [profile_id], references: [id], onDelete: Cascade)
   profile_id    String    @db.ObjectId
 
@@ -29,6 +30,20 @@ model User {
   updated_at    DateTime  @default(now())
 
   @@map("users")
+}
+
+model Comment {
+  id            String    @id @default(auto()) @map("_id") @db.ObjectId
+  post          Post      @relation(fields: [post_title], references: [title], onDelete: Cascade)
+  author        User      @relation(fields: [user_username], references: [username], onDelete: Cascade)
+  content       String
+  user_username String
+  post_title    String    
+ 
+  created_at    DateTime  @default(now())
+  updated_at    DateTime  @default(now())
+
+  @@map("comments")
 }
 
 model Profile {
@@ -41,9 +56,10 @@ model Profile {
 
 model Post {
   id            String    @id @default(auto()) @map("_id") @db.ObjectId
-  title         String
+  title         String    @unique
   content       String
   published     Boolean?  @default(false)
+  comments      Comment[]
   category      Category  @relation(fields: [category_id], references: [id])
   category_id   String    @db.ObjectId
   author        User      @relation(fields: [user_id], references: [id], onDelete: Cascade)
